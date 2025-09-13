@@ -1,5 +1,5 @@
 import React from "react"
-import { LayoutTemplate } from 'lucide-react';
+import { LayoutTemplate, X } from 'lucide-react';
 import { landingPageStyles } from "../src/assets/dummyStyle";
 const LandingPage=()=>{
     return(
@@ -9,25 +9,22 @@ const LandingPage=()=>{
                      <div className={landingPageStyles.logoContainer}>
                         <div className={landingPageStyles.logoIcon}>
                               <LayoutTemplate className={landingPageStyles.logoIconInner}/>
-                              <span className={landingPageStyles.logoText}>
-                           
-                              </span>
                         </div>
+                         <span className={landingPageStyles.logoText}>
+                            Resumate
+                         </span>
                      </div>
+                         <button className={landingPageStyles.mobileMenuButton}
+                            onClick={()=>{setMobileMenuOpen(!mobileMenuOpen)}}>
+                            {mobileMenuOpen?
+                            <X size={24} className={landingPageStyles.mobileMenuIcon}/>:
+                            <Menu size={24} className={landingPageStyles.mobileMenuIcon}/>}
+                     </button>
+                    
                 </div>
             </header>
         </div>
     )
 }
-
-<div className={landingPageStyles.logoIconInner}>
-                                <div className={landingPageStyles.logoText}>
-                                    <div className={landingPageStyles.mobileMenuButton}>
-                                        <div className={landingPageStyles.mobileMenuIcon}>
-                                                  hello world
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
 export default LandingPage
